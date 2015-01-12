@@ -95,8 +95,6 @@
 		28F489F317973B6100068E00 /* FakeFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F489F217973B6100068E00 /* FakeFileHandle.m */; };
 		28F489FC17973BF900068E00 /* NSFileHandle+Print.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F489FB17973BF900068E00 /* NSFileHandle+Print.m */; };
 		28F489FD17973BF900068E00 /* NSFileHandle+Print.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F489FB17973BF900068E00 /* NSFileHandle+Print.m */; };
-		28FFB00516FF5A21000CCE2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FFB00416FF5A21000CCE2A /* QuartzCore.framework */; };
-		28FFB00616FF5A2B000CCE2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FFB00416FF5A21000CCE2A /* QuartzCore.framework */; };
 		324BB4C51725BD990073A862 /* XcodeTargetMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BB4C41725BD990073A862 /* XcodeTargetMatch.m */; };
 		324BB4C61725BDA20073A862 /* XcodeTargetMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BB4C41725BD990073A862 /* XcodeTargetMatch.m */; };
 		32707EE21725FE7F00AF2F53 /* TestActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32707EE11725FE7F00AF2F53 /* TestActionTests.m */; };
@@ -106,6 +104,8 @@
 		3892D7421811A5CC00E68652 /* EventGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3892D7401811A5CC00E68652 /* EventGenerator.m */; };
 		40623EBE190EA61B004FB374 /* InstallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD190EA61B004FB374 /* InstallAction.m */; };
 		40623EBF190EA61B004FB374 /* InstallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 40623EBD190EA61B004FB374 /* InstallAction.m */; };
+		41FD3C2D1A6445480043EB1E /* MulleCurrentMediaTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 41FD3C2B1A6445480043EB1E /* MulleCurrentMediaTime.c */; };
+		41FD3C2E1A6447CA0043EB1E /* MulleCurrentMediaTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 41FD3C2B1A6445480043EB1E /* MulleCurrentMediaTime.c */; };
 		AA318BEF17E9BA3500BF159E /* TestingFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AA318BEE17E9BA3500BF159E /* TestingFramework.m */; };
 		AA318BF017E9BA3500BF159E /* TestingFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AA318BEE17E9BA3500BF159E /* TestingFramework.m */; };
 		AA6C88F71808C2C5006A3581 /* OTestShimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6C88F61808C2C5006A3581 /* OTestShimTests.m */; };
@@ -309,6 +309,8 @@
 		3892D7401811A5CC00E68652 /* EventGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGenerator.m; sourceTree = "<group>"; };
 		40623EBC190EA61B004FB374 /* InstallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallAction.h; sourceTree = "<group>"; };
 		40623EBD190EA61B004FB374 /* InstallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallAction.m; sourceTree = "<group>"; };
+		41FD3C2B1A6445480043EB1E /* MulleCurrentMediaTime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MulleCurrentMediaTime.c; sourceTree = "<group>"; };
+		41FD3C2C1A6445480043EB1E /* MulleCurrentMediaTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulleCurrentMediaTime.h; sourceTree = "<group>"; };
 		AA194FD118091AE700F56AFC /* ContainsAssertionFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainsAssertionFailure.h; sourceTree = "<group>"; };
 		AA318BEC17E9B7CA00BF159E /* XCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTest.h; sourceTree = "<group>"; };
 		AA318BED17E9BA3500BF159E /* TestingFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingFramework.h; sourceTree = "<group>"; };
@@ -388,7 +390,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FFB00616FF5A2B000CCE2A /* QuartzCore.framework in Frameworks */,
 				283CCA4616C2EA3800F2E343 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +398,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FFB00516FF5A21000CCE2A /* QuartzCore.framework in Frameworks */,
 				28E9B98E16C2FE4800A52E4D /* OCHamcrest.framework in Frameworks */,
 				28E9B98B16C2FDA700A52E4D /* OCMockito.framework in Frameworks */,
 				283CCAC316C2EE9900F2E343 /* SenTestingKit.framework in Frameworks */,
@@ -528,6 +528,8 @@
 				283CCAD516C2F10A00F2E343 /* XCTool.m */,
 				28E9B97D16C2F1C600A52E4D /* XCToolUtil.h */,
 				28E9B97E16C2F1C600A52E4D /* XCToolUtil.m */,
+				41FD3C2C1A6445480043EB1E /* MulleCurrentMediaTime.h */,
+				41FD3C2B1A6445480043EB1E /* MulleCurrentMediaTime.c */,
 			);
 			path = xctool;
 			sourceTree = "<group>";
@@ -828,7 +830,7 @@
 			name = "xctool-tests";
 			productName = "xctool-tests";
 			productReference = 283CCAC216C2EE9900F2E343 /* xctool-tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -898,6 +900,7 @@
 				286607711834757F000ACB87 /* OCUnitOSXAppTestQueryRunner.m in Sources */,
 				CCC55AD6195BCDD90051A50B /* SimulatorWrapper.m in Sources */,
 				28BB043D17C7FF43004F6C13 /* Buildable.m in Sources */,
+				41FD3C2D1A6445480043EB1E /* MulleCurrentMediaTime.c in Sources */,
 				287BF08416F1A97900590E06 /* XcodeSubjectInfo.m in Sources */,
 				CC229B0F1946396600E11C30 /* SimulatorUtils.m in Sources */,
 				28ACFC8316FBA888004BAF33 /* TaskUtil.m in Sources */,
@@ -1028,6 +1031,7 @@
 				EEB31CF417C6A21400CFB0E1 /* OCTestEventStateTests.m in Sources */,
 				EEB31CFA17C6D57B00CFB0E1 /* OCTestSuiteEventState.m in Sources */,
 				EEB31CFD17C6D5AB00CFB0E1 /* OCTestSuiteEventStateTests.m in Sources */,
+				41FD3C2E1A6447CA0043EB1E /* MulleCurrentMediaTime.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

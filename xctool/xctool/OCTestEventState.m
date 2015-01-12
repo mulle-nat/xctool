@@ -20,6 +20,7 @@
 
 #import "EventGenerator.h"
 #import "ReporterEvents.h"
+#import "MulleCurrentMediaTime.h"
 
 @implementation OCTestEventState
 
@@ -77,12 +78,12 @@
 {
   NSAssert(!_isStarted, @"Test should not have started yet.");
   _isStarted = true;
-  _beginTime = CACurrentMediaTime();
+  _beginTime = MulleCurrentMediaTime();
 }
 
 - (void)stateEndTest:(BOOL)successful result:(NSString *)result
 {
-  [self stateEndTest:successful result:result duration:(CACurrentMediaTime() - _beginTime)];
+  [self stateEndTest:successful result:result duration:(MulleCurrentMediaTime() - _beginTime)];
 }
 
 - (void)stateEndTest:(BOOL)successful result:(NSString *)result duration:(double)duration

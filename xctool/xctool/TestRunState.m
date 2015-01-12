@@ -22,6 +22,7 @@
 #import "OCTestSuiteEventState.h"
 #import "ReporterEvents.h"
 #import "XCToolUtil.h"
+#import "MulleCurrentMediaTime.h"
 
 @implementation TestRunState
 
@@ -298,11 +299,11 @@
 {
   // Wait for a moment to see if a crash report shows up.
   NSSet *crashReportsAtEnd = [NSSet setWithArray:[self collectCrashReportPaths]];
-  CFTimeInterval start = CACurrentMediaTime();
+  CFTimeInterval start = MulleCurrentMediaTime();
 
   while (!IsRunningUnderTest() &&
          [crashReportsAtEnd isEqualToSet:crashReportsAtStart] &&
-         (CACurrentMediaTime() - start < 10.0)) {
+         (MulleCurrentMediaTime() - start < 10.0)) {
     [NSThread sleepForTimeInterval:0.25];
     crashReportsAtEnd = [NSSet setWithArray:[self collectCrashReportPaths]];
   }

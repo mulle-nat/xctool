@@ -28,6 +28,7 @@
 #import "Version.h"
 #import "XCToolUtil.h"
 #import "XcodeSubjectInfo.h"
+#import "MulleCurrentMediaTime.h"
 
 @implementation XCTool
 
@@ -193,7 +194,7 @@
     }
 
     for (Action *action in options.actions) {
-      CFTimeInterval startTime = CACurrentMediaTime();
+      CFTimeInterval startTime = MulleCurrentMediaTime();
       PublishEventToReporters(options.reporters,
         EventDictionaryWithNameAndContent(kReporter_Events_BeginAction, @{
           kReporter_BeginAction_NameKey: [[action class] name],
@@ -204,7 +205,7 @@
 
       BOOL succeeded = [action performActionWithOptions:options xcodeSubjectInfo:xcodeSubjectInfo];
 
-      CFTimeInterval stopTime = CACurrentMediaTime();
+      CFTimeInterval stopTime = MulleCurrentMediaTime();
 
       PublishEventToReporters(options.reporters,
         EventDictionaryWithNameAndContent(kReporter_Events_EndAction, @{
